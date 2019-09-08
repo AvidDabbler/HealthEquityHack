@@ -1,7 +1,7 @@
 // const csvparser = require ('csv-parser')
 const fs = require('fs');
 const http = require ("https");
-const file = fs.createWriteStream("all.csv");
+const file = fs.createWriteStream("all_in.json");
 const results = [];
 let csvToJson = require('convert-csv-to-json');
 // require ('../bmf.js')
@@ -40,5 +40,3 @@ let json = csvToJson.formatValueByType().getJsonFromCsv("altere_data.csv");
 for(let i=0; i<json.length;i++){
     console.log(json[i]);
 }
-csvToJson.fieldDelimiter('~') .getJsonFromCsv("altere_data.csv");
-csvToJson.formatValueByType().getJsonFromCsv("altere_data.csv");
